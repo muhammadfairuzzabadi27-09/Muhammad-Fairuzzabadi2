@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Fairuzzabadi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://i.ibb.co/ZVh01dm/bg-anime.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .overlay {
+      background: rgba(255,255,255,0.85);
+      max-width: 420px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    h1 {
+      color: #4b3ca7;
+      margin-bottom: 20px;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 5px solid white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 15px;
+      margin: 20px 0;
+      text-align: left;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .btn {
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+      transition: 0.3s;
+    }
+    .btn:hover { opacity: 0.8; transform: scale(1.05); }
+    .green { background: linear-gradient(135deg, #25D366, #128C7E); }
+    .blue { background: linear-gradient(135deg, #007AFF, #004AAD); }
+    .orange { background: linear-gradient(135deg, #FFB347, #FF5F6D); }
+    .purple { background: linear-gradient(135deg, #8E2DE2, #4A00E0); }
+    .red { background: linear-gradient(135deg, #ff4e50, #d32f2f); }
+
+    /* Popup */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+    .popup-content {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      width: 80%;
+      max-width: 350px;
+      text-align: left;
+      animation: fadeIn 0.3s ease;
+    }
+    .popup-content h2 {
+      margin-top: 0;
+      color: #d32f2f;
+    }
+    .close-btn {
+      background: #d32f2f;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      float: right;
+      cursor: pointer;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Muhammad Fairuzzabadi</h1>
+    <img src="https://i.ibb.co/2t5w7Jt/avatar-anime.jpg" alt="profile" class="profile-img">
+    
+    <div class="card">
+      <p>👋 <b>Halo! Saya Muhammad Fairuzzabadi</b><br>
+      Transforming ideas into digital reality, one line of code at a time.</p>
+      <p>💻 <b>Keahlian:</b> HTML, CSS, JavaScript, Backend</p>
+      <p>🚀 Mari berkolaborasi untuk menciptakan solusi web yang luar biasa!</p>
+    </div>
+
+    <div class="buttons">
+      <a href="https://wa.me/6285710428392" target="_blank"><button class="btn green">CONTACT ME</button></a>
+      <a href="https://whatsapp.com/channel/0029VbBgmhkCnA7mOyPh7928" target="_blank"><button class="btn blue">CHANNEL WA</button></a>
+      <a href="https://chat.whatsapp.com/YYYYY" target="_blank"><button class="btn orange">GRUP WA</button></a>
+      <a href="https://link.dana.id/minta/085710428392" target="_blank"><button class="btn purple">PAYMENT</button></a>
+      <button class="btn red" onclick="openPopup()">INFORMASI</button>
+    </div>
+  </div>
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <button class="close-btn" onclick="closePopup()">X</button>
+      <h2>Informasi</h2>
+      <p>1. Klik tombol sesuai kebutuhan.</p>
+      <p>2. Jangan spam tombol kontak.</p>
+      <p>3. Untuk kerjasama hubungi langsung via WhatsApp.</p>
+      <p>4. Payment via Dana: <b>085710428392</b></p>
+      <p>5. Terima kasih sudah mampir 🙌</p>
+    </div>
+  </div>
+
+  <script>
+    function openPopup() {
+      document.getElementById("popup").style.display = "flex";
+    }
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+</body>
+</html>
